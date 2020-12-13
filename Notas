@@ -1,0 +1,37 @@
+#NOTAS
+rails s -> Inicia el servidor de rails
+rails console -> Inicia una consola para probar la aplicación
+render plain: params[:article] -> Renderiza el objeto en pantalla
+
+#GENERATE
+rails generate migration create_articles -> Crea la migracion
+rails generate controller Ejemplo -> Genera un controlador ejemplo_controller
+rails generate scaffold Article
+    Genera:
+    -DB Migration file
+    -Controller
+    -views
+    -Routes resource
+    -Model
+    
+
+rails db:migrate -> Migra las bases de datos
+rails routes | rails routes --expanded -> Muesta las rutas actuales de la aplicacion
+
+#Models
+Article.new
+Article.new(title: "First register", description: "Descritption for the first article")
+
+article = Article.new()
+article.title = "First register"
+article.description = "Descritption for the first article"
+article.save
+
+article = Article.new(title: "First register", description: "Descritption for the first article")
+article.save
+
+Article.all
+Article.find(2)
+Article.first
+Article.last
+Article.destroy
